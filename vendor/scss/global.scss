@@ -1,0 +1,40 @@
+* {
+  font-family: 'Ubuntu', sans-serif !important;
+  color: $c-text;
+}
+.true-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: $c-primary !important;
+  border-color: $c-primary !important;
+  background: transparent !important;
+  text-transform: uppercase;
+}
+.tagline{
+  color: $c-tagline;
+  font-weight:500;
+}
+h1 {
+  font-size: $f-h1;
+}
+p{
+  font-family: 'Raleway', sans-serif !important;
+  color: $c-text;
+  line-height: 20px;
+  letter-spacing: .7px;
+  font-size:.85rem;
+}
+.primary{
+  color: $c-primary;
+}

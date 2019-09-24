@@ -1,0 +1,15 @@
+$c-primary: #3FC4E4;
+$c-secondary: #595959;
+$c-menu: #181818;
+$c-bg: #252627;
+$c-text: white;
+$c-tagline: #7a7a7a;
+$c-input: #37393b;
+$f-nav: 1rem;
+$f-h1: 3.6rem;
+@mixin true-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
