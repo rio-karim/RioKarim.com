@@ -8,34 +8,22 @@
         animation-name="v-fade-left"
       />
       <sidebar />
-      <loader v-if="loading" />
-      <nuxt id="__viewport" v-else />
+      <nuxt id="__viewport" />
     </div>
   </div>
 </template>
 <script>
 import Sidebar from '~/layouts/sidebar'
-import Loader from '~/layouts/loader'
 export default {
   components: {
-    Sidebar,
-    Loader
-  },
-
-  data() {
-    return {
-      loading: false
-    }
+    Sidebar
   },
   created() {
     this.$router.beforeEach((to, from, next) => {
-      this.loading = true
       next()
     })
     //  hook the progress bar to finish after we've finished moving router-view
-    this.$router.afterEach((to, from) => {
-      this.loading = false
-    })
+    this.$router.afterEach((to, from) => {})
   }
 }
 </script>
@@ -63,7 +51,7 @@ body {
     top: 0;
     height: 100vh;
     width: 200px;
-
+    z-index: 11111111111;
     .vue-notification {
       padding: 10px;
       margin: 0 5px 5px;

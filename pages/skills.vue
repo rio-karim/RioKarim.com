@@ -36,8 +36,12 @@
         </div>
       </div>
       <div class="Skills__item col-12 col-md-8 col-lg-7 relative">
-        <Spinner v-if="loader" />
-        <div id="ajaxsass" class="col col-media col-logo">
+        <Loader v-if="loader" />
+        <div
+          id="ajaxsass"
+          :class="{ active: !loader }"
+          class="col col-media col-logo"
+        >
           <canvas id="tagcanvas" width="700" height="700">
             <p>
               Anything in here will be replaced on browsers that support the
@@ -78,10 +82,10 @@
 </template>
 
 <script>
-import Spinner from '~/components/blocks/Spinner'
+import Loader from '~/components/blocks/Loader'
 export default {
   components: {
-    Spinner
+    Loader
   },
   data() {
     return {
@@ -125,6 +129,13 @@ export default {
 <style lang="scss" scoped>
 .Skills {
   &__item {
+    .col-media {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      &.active {
+        opacity: 1;
+      }
+    }
     &-header {
       position: relative;
       &::before {

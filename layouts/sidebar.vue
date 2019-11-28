@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="Sidebar d-flex flex-column">
+  <div class="Sidebar d-flex flex-column fixed">
     <div class="Sidebar-item"></div>
     <div class="Sidebar-item  d-flex align-items-center">
       <nav class="Sidebar-item__list">

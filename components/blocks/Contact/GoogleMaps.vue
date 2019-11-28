@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      center: { lat: 51.5760923, lng: -3.2224377 },
+      center: { lat: 51.4686877, lng: -3.1628649 },
       markers: [],
       places: [],
       currentPlace: null,
