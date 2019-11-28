@@ -17,6 +17,7 @@
               <div class="form-group p-3 mb-2 mr-1">
                 <input
                   id="name"
+                  v-model="name"
                   class="form__input text"
                   type="text"
                   name="name"
@@ -28,6 +29,7 @@
               <div class="form-group p-3 mb-2 ml-1">
                 <input
                   id="email"
+                  v-model="email"
                   class="form__input text"
                   type="email"
                   name="email"
@@ -40,6 +42,7 @@
             <div class="form-group p-3 mb-2 col-12">
               <input
                 id="subject"
+                v-model="subject"
                 class="form__input text"
                 name="subject"
                 type="text"
@@ -51,6 +54,7 @@
             <div class="form-group p-3 mb-2 col-12">
               <textarea
                 id="message"
+                v-model="message"
                 class="form__input form__input--textarea text"
                 name="message"
                 style="resize:none;"
@@ -62,11 +66,12 @@
               <label class="input__label--highlight" for="message"></label>
             </div>
             <button
+              @click="sendEmail()"
               name="submit"
               type="submit"
               class="btn btn-primary float-right"
             >
-              <span>Send</span>
+              Send
             </button>
           </form>
         </div>
@@ -83,6 +88,40 @@ import GoogleMaps from '~/components/blocks/Contact/GoogleMaps'
 export default {
   components: {
     GoogleMaps
+  },
+  data() {
+    return {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
+  },
+  methods: {
+    sendEmail() {
+      if (this.name && this.email && this.subject && this.message) {
+        this.$store
+          .dispatch('ui/postEmail', {
+            name: this.name,
+            email: this.email,
+            subject: this.subject,
+            message: this.message
+          })
+          .then(res => {
+            this.$notify({
+              group: 'default',
+              title: 'Email sent!',
+              text: 'Your email has been sent.'
+            })
+          })
+      } else {
+        this.$notify({
+          group: 'default',
+          title: 'Empty fields!',
+          text: 'Please fill in all fields.'
+        })
+      }
+    }
   }
 }
 </script>

@@ -1,10 +1,10 @@
 import Vuex from 'vuex'
-import Ui from './ui'
+import ui from './ui'
 
 const createStore = () =>
   new Vuex.Store({
     modules: {
-      Ui
+      ui: ui
     }
   })
 

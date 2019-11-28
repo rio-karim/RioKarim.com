@@ -48,7 +48,7 @@ export default {
   min-width: 60px;
   width: 60px;
   max-width: 60px;
-  height: 100%;
+  height: 100vh;
   background: $c-menu;
   &-item {
     flex: 1;

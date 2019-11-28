@@ -1,14 +1,14 @@
 <template lang="html">
   <div
-    class="SidebarIcon d-flex justify-content-center align-items-center"
     @mouseover="hover = true"
     @mouseleave="hover = false"
+    class="SidebarIcon d-flex justify-content-center align-items-center"
   >
     <template v-if="type === 'home'">
       <span :class="{ hidden: !hover }" class="absolute true-center">HOME</span>
       <home-icon
-        class="SidebarIcon__svg"
         :class="{ 'SidebarIcon__svg--hidden': hover }"
+        class="SidebarIcon__svg"
       />
     </template>
     <template v-else-if="type === 'about'">
@@ -16,8 +16,8 @@
         >ABOUT</span
       >
       <about-icon
-        class="SidebarIcon__svg"
         :class="{ 'SidebarIcon__svg--hidden': hover }"
+        class="SidebarIcon__svg"
       />
     </template>
     <template v-if="type === 'skills'">
@@ -25,8 +25,8 @@
         >SKILLS</span
       >
       <skills-icon
-        class="SidebarIcon__svg"
         :class="{ 'SidebarIcon__svg--hidden': hover }"
+        class="SidebarIcon__svg"
       />
     </template>
     <template v-if="type === 'portfolio'">
@@ -34,8 +34,8 @@
         >MY WORK</span
       >
       <portfolio-icon
-        class="SidebarIcon__svg"
         :class="{ 'SidebarIcon__svg--hidden': hover }"
+        class="SidebarIcon__svg"
       />
     </template>
     <template v-if="type === 'contact'">
@@ -43,8 +43,8 @@
         >CONTACT</span
       >
       <contact-icon
-        class="SidebarIcon__svg"
         :class="{ 'SidebarIcon__svg--hidden': hover }"
+        class="SidebarIcon__svg"
       />
     </template>
   </div>
@@ -96,6 +96,7 @@ export default {
   span {
     transition: opacity 0.2s ease-in-out;
     white-space: nowrap;
+    color: $c-primary;
     &.hidden {
       opacity: 0;
     }

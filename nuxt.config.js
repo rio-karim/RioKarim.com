@@ -16,9 +16,9 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dancing+Script|Raleway|Ubuntu:300,400,500,700'}
-    ]
+    ],
+    script: []
   },
-
   /*
    ** Customize the progress-bar color
    */
@@ -33,7 +33,10 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-plugins: [{ src: "~/plugins/google-maps", ssr: true }],
+plugins: [
+  { src: "~/plugins/google-maps", ssr: false },
+  { src: "~/plugins/vue-notification", ssr: true }
+],
 
   /*
    ** Nuxt.js modules
