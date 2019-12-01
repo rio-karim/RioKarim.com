@@ -69,13 +69,7 @@
 export default {
   methods: {
     sendEmail() {
-      this.$store.dispatch('contact/sendEmail').then(resp => {
-        this.$notify({
-          group: 'default',
-          title: resp.title,
-          text: resp.message
-        })
-      })
+      this.$store.dispatch('contact/sendEmail')
     }
   }
 }

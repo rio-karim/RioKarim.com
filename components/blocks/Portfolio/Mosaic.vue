@@ -63,79 +63,30 @@
 </template>
 
 <script>
-import { each, random, extend } from 'underscore'
+import { mapState, mapActions } from 'vuex'
 import Loader from '~/components/blocks/Loader'
 export default {
   components: {
     Loader
   },
-  data() {
-    return {
-      target: 0,
-      loader: true,
-      faded: false,
-      mosaic: '',
-      imageList: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png'],
-      imageRaw: [
-        require('~/static/gallery/1.png'),
-        require('~/static/gallery/2.png'),
-        require('~/static/gallery/3.png'),
-        require('~/static/gallery/4.png'),
-        require('~/static/gallery/5.png'),
-        require('~/static/gallery/6.png')
-      ],
-      urlList: ['/test', '/test', '/test', '/test', '/test', '/test'],
-      urlCache: {
-        '1.png': '/1',
-        '2.png': '/2',
-        '3.png': '/3',
-        '4.png': '/4',
-        '5.png': '/5',
-        '6.png': '/6',
-        '7.png': '/7',
-        '8.png': '/8',
-        '9.png': '/9',
-        '10.png': '/10',
-        '11.png': '/11',
-        '12.png': '/12',
-        '13.png': '/13',
-        '14.png': '/14',
-        '15.png': '/15'
-      }
-    }
-  },
+  computed: mapState('gallery', {
+    loader: state => state.loader,
+    urlList: state => state.urlList,
+    imageRaw: state => state.imageRaw,
+    target: state => state.target,
+    faded: state => state.faded,
+    selected: state => state.selected
+  }),
   mounted() {
-    setTimeout(() => {
-      this.loader = false
-      this.mosaic = setInterval(() => {
-        let newTarget = random(0, 5)
-        let targetExists = this.target === newTarget
-        while (targetExists) {
-          newTarget = random(0, 5)
-          targetExists = this.target === newTarget
-        }
-        this.target = newTarget
-        this.faded = true
-        setTimeout(() => {
-          let newImg = random(1, 15)
-          let imgExists = this.imageList.includes(`${newImg}.png`)
-          while (imgExists) {
-            newImg = random(1, 15)
-            imgExists = this.imageList.includes(`${newImg}.png`)
-          }
-          this.imageList[this.target] = `${newImg}.png`
-          this.imageRaw[this.target] = require(`~/static/gallery/${newImg}.png`)
-          this.urlList[this.target] = this.urlCache[`${newImg}.png`]
-        }, 750)
-        setTimeout(() => {
-          this.faded = false
-        }, 1500)
-      }, 4000)
-    }, 1500)
+    this.startMosaic()
   },
   beforeDestroy() {
-    clearInterval(this.mosaic)
-  }
+    this.stopMosaic()
+  },
+  methods: mapActions('gallery', {
+    stopMosaic: 'stop',
+    startMosaic: 'start'
+  })
 }
 </script>
 

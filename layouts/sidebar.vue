@@ -19,7 +19,7 @@
           /></nuxt-link>
         </li>
         <li class="Sidebar-item__list-item">
-          <nuxt-link to="/portfolio" class="Sidebar-item__list-item-link"
+          <nuxt-link to="/gallery" class="Sidebar-item__list-item-link"
             ><sidebar-icon type="portfolio"
           /></nuxt-link>
         </li>

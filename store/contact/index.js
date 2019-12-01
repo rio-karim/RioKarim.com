@@ -1,5 +1,4 @@
 const namespaced = true
-
 const state = {
   name: '',
   email: '',
@@ -7,20 +6,24 @@ const state = {
   message: '',
   available: true
 }
-const getters = {}
 const mutations = {
   setAvailable(state, action) {
     state.available = action === true
   }
 }
 const actions = {
-  sendEmail({ commit, state }) {
+  sendEmail({ commit, state, dispatch }) {
     if (!state.name || !state.email || !state.subject || !state.message) {
-      return {
-        status: 500,
-        title: 'Validation!',
-        message: 'Please fill in all fields.'
-      }
+      dispatch(
+        'ui/notification',
+        {
+          status: 500,
+          title: 'Validation!',
+          message: 'Please fill in all fields.'
+        },
+        { root: true }
+      )
+      return
     }
     const emailPromise = fetch('/api/contact', {
       method: 'POST',
@@ -37,31 +40,43 @@ const actions = {
     })
       .then(res => res.json())
       .catch(() => {
-        return {
-          status: 400,
-          title: 'Error!',
-          message: 'There was an error sending your email.'
-        }
+        dispatch(
+          'ui/notification',
+          {
+            status: 400,
+            title: 'Error!',
+            message: 'There was an error sending your email.'
+          },
+          { root: true }
+        )
       })
     return emailPromise.then(resp => {
       if (resp.status === 200) {
         commit('setAvailable', false)
-        return {
-          status: 200,
-          title: 'Success!',
-          message: 'Your email was sent.'
-        }
+        dispatch(
+          'ui/notification',
+          {
+            status: 200,
+            title: 'Success!',
+            message: 'Your email was sent.'
+          },
+          { root: true }
+        )
       } else {
-        return {
-          status: 400,
-          title: 'Error!',
-          message: 'There was an error sending your email.'
-        }
+        dispatch(
+          'ui/notification',
+          {
+            status: 400,
+            title: 'Error!',
+            message: 'There was an error sending your email.'
+          },
+          { root: true }
+        )
       }
     })
   }
 }
-
+const getters = {}
 export default {
   namespaced,
   actions,
