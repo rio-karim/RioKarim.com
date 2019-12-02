@@ -44,11 +44,12 @@ plugins: [
   modules: [
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'bootstrap-vue/nuxt'
   ],
   styleResources: {
      // your settings here
-     scss: ['@/vendor/scss/variables.scss', '@/node_modules/bootstrap/scss/bootstrap.scss'],
+     scss: ['@/vendor/scss/variables.scss'],
      less: [],
      stylus: []
     },
