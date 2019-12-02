@@ -33,4 +33,14 @@ img {
   opacity: 1;
   transform: translateX(0);
 }
+@media (max-width: 991px) {
+  img {
+    opacity: 1;
+    transform: translateX(20%) scale(1.2);
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform: translateX(80%) scale(1.25);
+    opacity: 0;
+  }
+}
 </style>

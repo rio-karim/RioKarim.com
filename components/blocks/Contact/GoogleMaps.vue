@@ -112,4 +112,14 @@ export default {
     width: 100%;
   }
 }
+
+@media (max-width: 991px) {
+  .GoogleMaps {
+    height: 460px;
+    &__map {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
 </style>

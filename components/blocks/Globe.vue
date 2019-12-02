@@ -2,9 +2,9 @@
   <div
     id="ajaxsass"
     :class="{ active: !loader }"
-    class="col col-media col-logo"
+    class="col col-media col-logo flex-center"
   >
-    <canvas id="tagcanvas" width="700" height="700">
+    <canvas id="tagcanvas" width="650" height="650">
       <p>
         Anything in here will be replaced on browsers that support the canvas
         element
@@ -50,4 +50,16 @@ export default {
 }
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+canvas {
+  width: 700px;
+  height: 700px;
+}
+
+@media (max-width: 991px) {
+  canvas {
+    width: 90%;
+    height: auto;
+  }
+}
+</style>

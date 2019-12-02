@@ -12,6 +12,9 @@
   filter: grayscale(1);
   opacity:.7;
 }
+[v-cloak] {
+  display: none;
+}
 .flex-center{
   display:flex;
   align-items: center;
@@ -40,4 +43,25 @@ p{
 }
 .primary{
   color: $c-primary;
+}
+
+.container-fluid {
+  min-height:100%;
+  .row:not(.row--home){
+    min-height:100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .container-fluid {
+    padding-top: 60px;
+    position:relative;
+    width: 100%;
+    .row:not(.row--home) {
+      height: 100%;
+      h1 {
+        font-size: 38px;
+      }
+    }
+  }
 }

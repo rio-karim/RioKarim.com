@@ -1,19 +1,29 @@
 <template>
-  <div class="Home py-5 d-flex align-items-center">
-    <div class="container-fluid row py-4">
-      <div class="Home__item hero-unit col-12 col-md-4 col-lg-5 pl-5">
-        <div class="pl-4">
-          <h1 class="mb-1">Hi,</h1>
-          <h1 class="mb-1">I'm Rio,</h1>
-          <h1 class="mb-2">Web Developer.</h1>
-          <p class="tagline mb-3 ml-1">Node JS / SSR / Express</p>
-          <nuxt-link to="/contact" class="btn btn-primary btn-large ml-1">
-            Contact me
-          </nuxt-link>
+  <div class="Home py-lg-5 d-flex align-items-lg-center">
+    <div class="container-fluid py-lg-4 d-flex align-items-center">
+      <div class="row row--home">
+        <div class="Home__item hero-unit col-12 col-md-5 col-lg-5 pl-lg-5">
+          <div class="pl-lg-4">
+            <h1 v-if="hasMounted" class="mb-1">Hi,</h1>
+            <h1 v-if="hasMounted" class="mb-1">
+              I'm <span class="primary font-weight-bold">R</span>io,
+            </h1>
+            <h1 v-if="hasMounted" class="mb-2">Web Developer.</h1>
+            <p v-if="hasMounted" class="tagline mb-3 ml-1">
+              Node JS / SSR / Express
+            </p>
+            <nuxt-link
+              v-if="hasMounted"
+              to="/contact"
+              class="btn btn-primary btn-large ml-1"
+            >
+              Contact me
+            </nuxt-link>
+          </div>
         </div>
-      </div>
-      <div class="Home__item col-12 col-md-8 col-lg-7">
-        <home-logo />
+        <div class="Home__item col-12 col-md-7 col-lg-7">
+          <home-logo />
+        </div>
       </div>
     </div>
   </div>
@@ -25,6 +35,16 @@ import MyConfig from '~/rk.config'
 export default {
   components: {
     HomeLogo
+  },
+  data() {
+    return {
+      hasMounted: false
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.hasMounted = true
+    }, 50)
   }
 }
 </script>

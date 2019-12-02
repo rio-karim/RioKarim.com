@@ -1,6 +1,6 @@
 <template>
   <div class="default">
-    <div id="__app" class="App relative d-flex flex-row">
+    <div id="__app" v-cloak class="App d-flex flex-column flex-lg-row">
       <notifications
         :speed="500"
         group="default"
@@ -13,10 +13,20 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
 import Sidebar from '~/layouts/sidebar'
 export default {
   components: {
     Sidebar
+  },
+  watch: {
+    $route: {
+      handler: function(to) {
+        this.setView(to.name)
+      },
+      deep: true,
+      immediate: true
+    }
   },
   created() {
     this.$router.beforeEach((to, from, next) => {
@@ -24,7 +34,10 @@ export default {
     })
     //  hook the progress bar to finish after we've finished moving router-view
     this.$router.afterEach((to, from) => {})
-  }
+  },
+  methods: mapActions('ui', {
+    setView: 'view'
+  })
 }
 </script>
 <style lang="scss">
@@ -33,16 +46,46 @@ export default {
 html,
 body {
   width: 100%;
+  background: $c-bg;
   height: 100%;
   #__app,
   #__nuxt,
   #__layout {
     width: 100%;
     height: 100%;
+    overflow: hidden;
     #__viewport {
       flex: 1;
-      background: $c-bg;
       overflow: hidden;
+      padding-left: 60px;
+      position: relative;
+      height: 100vh;
+      &::before {
+        background: transparent;
+        content: '<body>';
+        position: absolute;
+        top: 3%;
+        left: 7%;
+        width: 50px;
+        color: #595959;
+        font-style: italic;
+        font-size: 16px;
+        font-family: 'Dancing Script', cursive;
+        letter-spacing: 3px;
+      }
+      &::after {
+        background: transparent;
+        content: '<<</body> </html>';
+        position: absolute;
+        bottom: 3%;
+        left: 7%;
+        width: 50px;
+        color: #595959;
+        font-style: italic;
+        font-size: 16px;
+        font-family: 'Dancing Script', cursive;
+        letter-spacing: 3px;
+      }
     }
   }
   .Notifications {
@@ -51,7 +94,9 @@ body {
     top: 0;
     height: 100vh;
     width: 200px;
-    z-index: 11111111111;
+    * {
+      z-index: 99999;
+    }
     .vue-notification {
       padding: 10px;
       margin: 0 5px 5px;
@@ -81,33 +126,8 @@ body {
       }
     }
   }
-  #__viewport {
-    &::before {
-      background: transparent;
-      content: '<body>';
-      position: absolute;
-      top: 6.5%;
-      left: 7%;
-      width: 50px;
-      color: #595959;
-      font-style: italic;
-      font-size: 16px;
-      font-family: 'Dancing Script', cursive;
-      letter-spacing: 3px;
-    }
-    &::after {
-      background: transparent;
-      content: '</body>';
-      position: absolute;
-      bottom: 6.5%;
-      left: 7%;
-      width: 50px;
-      color: #595959;
-      font-style: italic;
-      font-size: 16px;
-      font-family: 'Dancing Script', cursive;
-      letter-spacing: 3px;
-    }
+  #__app {
+    position: relative;
   }
 }
 .v-fade-left-enter-active,
@@ -119,5 +139,33 @@ body {
 .v-fade-left-leave-to {
   opacity: 0;
   transform: translateX(500px) scale(0.2);
+}
+
+@media (max-width: 991px) {
+  html,
+  body {
+    #__app,
+    #__nuxt,
+    #__layout {
+      #__viewport {
+        padding-top: 60px;
+        padding-left: 0;
+        height: unset;
+        min-height: 100vh;
+        &::before {
+          top: 1%;
+          left: 7%;
+        }
+        &::after {
+          bottom: 1%;
+          left: 7%;
+        }
+      }
+    }
+
+    #__layout {
+      overflow-y: scroll;
+    }
+  }
 }
 </style>

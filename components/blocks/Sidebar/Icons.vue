@@ -88,13 +88,12 @@ export default {
   &__svg {
     height: 22px;
     width: auto;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.4s cubic-bezier(0, 0.63, 0, 0.83);
     &--hidden {
       opacity: 0;
     }
   }
   span {
-    transition: opacity 0.2s ease-in-out;
     white-space: nowrap;
     color: $c-primary;
     &.hidden {

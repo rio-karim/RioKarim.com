@@ -42,17 +42,13 @@ plugins: [
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
     '@nuxtjs/style-resources'
   ],
   styleResources: {
      // your settings here
-     scss: ['@/vendor/scss/variables.scss'],
+     scss: ['@/vendor/scss/variables.scss', '@/node_modules/bootstrap/scss/bootstrap.scss'],
      less: [],
      stylus: []
     },

@@ -1,12 +1,12 @@
 <template>
   <div class="Contact">
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
       <div class="row">
         <div
-          class="Contact__item hero-unit px-4 col-12 col-md-4 col-lg-5 d-flex align-items-center"
+          class="Contact__item hero-unit px-4 col-12 col-lg-5 d-flex align-items-center"
         >
-          <div class="pl-4">
-            <div class="py-5 Contact__item-header">
+          <div class="pl-lg-4 mx-auto px-4 px-lg-0">
+            <div class="pb-4 pb-lg-5 pt-lg-5 Contact__item-header">
               <h1 class="mb-1 primary">Contact me</h1>
             </div>
             <p class="mb-2">
@@ -16,8 +16,8 @@
             <email-form />
           </div>
         </div>
-        <div class="Contact__item col-12 col-md-8 col-lg-7">
-          <google-maps />
+        <div class="Contact__item col-12 col-lg-7 pb-5 pb-lg-0">
+          <google-maps class="p-4 p-lg-0" />
         </div>
       </div>
     </div>
@@ -73,5 +73,20 @@ export default {
 img {
   width: 85%;
   height: auto;
+}
+@media (max-width: 991px) {
+  .Contact {
+    &__item {
+      &-header {
+        &::before {
+          top: -25%;
+          left: 10%;
+        }
+        &::after {
+          bottom: 17%;
+        }
+      }
+    }
+  }
 }
 </style>
