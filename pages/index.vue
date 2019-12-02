@@ -54,4 +54,39 @@ img {
   width: 85%;
   height: auto;
 }
+.hero-unit {
+  position: relative;
+  &::before {
+    background: transparent;
+    content: '<h1>';
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    width: 50px;
+    color: #595959;
+    font-style: italic;
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 3px;
+  }
+  &::after {
+    background: transparent;
+    content: '</h1>';
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    width: 50px;
+    color: #595959;
+    font-style: italic;
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 3px;
+  }
+}
+
+@media (min-width: 766px) {
+  h1 {
+    font-size: 4vw;
+  }
+}
 </style>

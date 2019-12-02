@@ -59,8 +59,23 @@ p{
     width: 100%;
     .row:not(.row--home) {
       height: 100%;
+      h1{
+        font-size: 36px;
+      }
+    }
+    .row--home{
       h1 {
-        font-size: 38px;
+        font-size: 5.1vw;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .container-fluid {
+    .row--home {
+      height: 100%;
+      h1 {
+        font-size: 10vw;
       }
     }
   }
