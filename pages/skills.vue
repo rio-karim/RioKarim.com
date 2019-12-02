@@ -51,6 +51,11 @@ import Loader from '~/components/blocks/Loader'
 import Globe from '~/components/blocks/Globe'
 
 export default {
+  head() {
+    return {
+      title: 'Rio Karim | Skills'
+    }
+  },
   components: {
     Loader,
     Globe

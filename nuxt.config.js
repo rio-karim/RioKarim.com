@@ -1,5 +1,4 @@
 const pkg = require('./package')
-
 module.exports = {
   mode: 'universal',
 
@@ -7,11 +6,12 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'Rio Karim | Web Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'Experienced Developer with a demonstrated history of engineering applications. Skilled in Laravel, Vue.js, Node.JS, SQL, PHP, MongoDB, AWS, JavaScript.' },
+      { hid: 'title', name: 'title', content: 'Rio Karim | Web Developer' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

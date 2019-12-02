@@ -88,15 +88,15 @@ body {
       }
     }
   }
+  .vue-notification-group {
+    z-index: 0 !important;
+  }
   .Notifications {
     position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
     width: 200px;
-    * {
-      z-index: 99999;
-    }
     .vue-notification {
       padding: 10px;
       margin: 0 5px 5px;

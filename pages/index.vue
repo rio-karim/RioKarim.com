@@ -31,8 +31,12 @@
 
 <script>
 import HomeLogo from '~/components/blocks/Home/Logo'
-import MyConfig from '~/rk.config'
 export default {
+  head() {
+    return {
+      title: 'Rio Karim | Home'
+    }
+  },
   components: {
     HomeLogo
   },

@@ -45,6 +45,11 @@
 <script>
 import WebsoarLogo from '~/components/blocks/About/WebsoarLogo'
 export default {
+  head() {
+    return {
+      title: 'Rio Karim | About'
+    }
+  },
   components: {
     WebsoarLogo
   },

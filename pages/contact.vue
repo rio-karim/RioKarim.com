@@ -29,6 +29,11 @@ import GoogleMaps from '~/components/blocks/Contact/GoogleMaps'
 import EmailForm from '~/components/blocks/Contact/EmailForm'
 
 export default {
+  head() {
+    return {
+      title: 'Rio Karim | Contact'
+    }
+  },
   components: {
     GoogleMaps,
     EmailForm

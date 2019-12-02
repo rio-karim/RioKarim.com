@@ -104,12 +104,12 @@ export default {
     view: state => state.view,
     menu: state => state.menu
   }),
-  methods: mapActions('ui', {
-    openMenu: 'menu'
-  }),
   mounted() {
     this.hasMounted = true
-  }
+  },
+  methods: mapActions('ui', {
+    openMenu: 'menu'
+  })
 }
 </script>
 
@@ -195,9 +195,6 @@ export default {
       text-decoration: none !important;
     }
   }
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575px) {
 }
 
 @media (max-width: 991px) {
