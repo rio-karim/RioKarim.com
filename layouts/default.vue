@@ -166,7 +166,7 @@ body {
     }
 
     #__layout {
-      overflow-y: scroll;
+      overflow-y: auto;
     }
   }
 }

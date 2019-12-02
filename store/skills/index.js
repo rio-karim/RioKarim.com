@@ -38,6 +38,7 @@ const actions = {
   stop({ state }) {
     const tagScript = document.querySelector('#TagCanvas')
     tagScript.parentNode.removeChild(tagScript)
+    state.loader = true
   }
 }
 
