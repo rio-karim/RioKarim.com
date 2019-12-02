@@ -66,6 +66,7 @@ img {
     position: absolute;
     top: -5%;
     left: 5%;
+    opacity: 0.3;
     width: 50px;
     color: #595959;
     font-style: italic;
@@ -80,6 +81,7 @@ img {
     top: 15%;
     left: 45%;
     width: 50px;
+    opacity: 0.3;
     color: #595959;
     font-style: italic;
     font-size: 16px;

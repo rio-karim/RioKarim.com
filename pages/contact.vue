@@ -52,6 +52,7 @@ export default {
         position: absolute;
         top: 17%;
         left: 0;
+        opacity: 0.3;
         width: 50px;
         color: #595959;
         font-style: italic;
@@ -68,6 +69,7 @@ export default {
         width: 50px;
         color: #595959;
         font-style: italic;
+        opacity: 0.3;
         font-size: 16px;
         font-family: 'Dancing Script', cursive;
         letter-spacing: 3px;

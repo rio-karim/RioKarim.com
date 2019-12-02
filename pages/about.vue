@@ -74,9 +74,11 @@ export default {
         font-size: 16px;
         font-family: 'Dancing Script', cursive;
         letter-spacing: 3px;
+        opacity: 0.3;
       }
       &::after {
         background: transparent;
+        opacity: 0.3;
         content: '</h1>';
         position: absolute;
         bottom: 17%;

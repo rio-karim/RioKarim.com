@@ -45,7 +45,7 @@ export default {}
   }
   #no-freeze-spinner {
     z-index: 9999;
-    opacity: 0.5;
+    opacity: 0.3;
     transform: scale(1);
   }
   #no-freeze-spinner > div > div {

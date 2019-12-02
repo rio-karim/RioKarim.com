@@ -69,6 +69,7 @@ body {
         width: 50px;
         color: #595959;
         font-style: italic;
+        opacity: 0.3;
         font-size: 16px;
         font-family: 'Dancing Script', cursive;
         letter-spacing: 3px;
@@ -81,6 +82,7 @@ body {
         left: 7%;
         width: 50px;
         color: #595959;
+        opacity: 0.3;
         font-style: italic;
         font-size: 16px;
         font-family: 'Dancing Script', cursive;

@@ -98,6 +98,7 @@ export default {
         color: #595959;
         font-style: italic;
         font-size: 16px;
+        opacity: 0.3;
         font-family: 'Dancing Script', cursive;
         letter-spacing: 3px;
       }
@@ -106,6 +107,7 @@ export default {
         content: '</h1>';
         position: absolute;
         bottom: 17%;
+        opacity: 0.3;
         left: 0;
         width: 50px;
         color: #595959;
