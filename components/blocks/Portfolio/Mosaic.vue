@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="Mosaic">
-    <template v-if="loader"><Loader /></template>
+    <template v-if="loader"><Loader class="Mosaic__loader"/></template>
     <transition name="fade">
       <div v-if="!loader" class="row">
         <a
@@ -183,6 +183,11 @@ export default {
   .Mosaic {
     left: 0;
     top: 60px;
+    &__loader {
+      position: absolute;
+      bottom: unset !important;
+      height: calc(100vh - 60px);
+    }
   }
 }
 
