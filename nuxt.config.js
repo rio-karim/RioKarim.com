@@ -23,7 +23,7 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-icon-192x192.png' },
       { rel: 'apple-touch-icon', type: 'image/png', sizes: '57x57', href: '/apple-icon-57x57.png' },
       { rel: 'apple-touch-icon', type: 'image/png', sizes: '60x60', href: '/apple-icon-60x60.png' },
-      { rel: 'apple-touch-icon', type: 'image/png', sizes: '72x72', href: '//apple-icon-72x72.png' },
+      { rel: 'apple-touch-icon', type: 'image/png', sizes: '72x72', href: '/apple-icon-72x72.png' },
       { rel: 'apple-touch-icon', type: 'image/png', sizes: '76x76', href: '/apple-icon-76x76.png' },
       { rel: 'apple-touch-icon', type: 'image/png', sizes: '114x114', href: '/apple-icon-114x114.png' },
       { rel: 'apple-touch-icon', type: 'image/png', sizes: '120x120', href: '/apple-icon-120x120.png' },

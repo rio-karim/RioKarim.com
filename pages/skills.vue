@@ -10,8 +10,8 @@
               <h1 class="mb-1 primary">Skills & Expertise</h1>
             </div>
             <p class="mb-3">
-              My primary area of expertise is front end development, also
-              comfortable working with and building APIs - integrated with MySQL
+              My primary area of expertise as a junior developer was in front end development, but as I grew and became more exposed and experienced with tech, I regularly
+              maintain and build APIs and backend services - integrated with MySQL
               or Mongo.
             </p>
             <p class="mb-3">
