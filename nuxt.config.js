@@ -75,7 +75,11 @@ plugins: [
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
+  buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-106792423-2'
+    }]
+  ],
   /*
    ** Build configuration
    */

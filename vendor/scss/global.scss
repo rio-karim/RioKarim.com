@@ -21,6 +21,11 @@
   justify-content: center;
 }
 
+p a {
+  color: $c-primary !important;
+  text-decoration: underline;
+}
+
 .btn-primary {
   color: $c-primary !important;
   border-color: $c-primary !important;
