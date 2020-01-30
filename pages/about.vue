@@ -15,21 +15,21 @@
               several great websites.
             </p>
             <p class="mb-3">
-              In 2016 I went to Cardiff University to graduate from
+              In 2016 I went to <a href="https://www.cardiff.ac.uk/computer-science">Cardiff University</a>to graduate from
               post-graduate Computer Science, where I learned a variety of languages - including Java, Assembly, Python
-              and JavaScript. With the close support, communication and collaboration of my friends and peers, after graduation I began working in a startup with some of my university alumni. In those 6 months we built, marketed and launched a CRM SaaS service called Datalyse.
+              and JavaScript. Following the support, communication and collaboration of fellow graduates, I began working in a startup with some of my university alumni. In those 6 months we built, marketed and launched a CRM SaaS service called <a href="https://datalyse.io/en/" target="_blank">Datalyse</a>.
             </p>
             <p class="mb-3">
               I then began working as a freelancer and contractor for several
-              clients and companies in the Natwest Accelerator at Cardiff's Central
+              clients and companies in the <a href="https://www.business.natwest.com/business/business-services/entrepreneur-accelerator.html">Natwest Entrepreneur Accelerator</a> at Cardiff's Central
               Square. Being self-employed for a year, and having collaborated and worked solo on multiple CRM
-              systems and frontends, I then began working for PillTime (Online Pharmacy),
+              systems and frontends, I then began working for <a href="https://pilltime.co.uk/">PillTime (Online Pharmacy)</a>,
               using a mixture of Laravel and JavaScript supporting their internal operations, and NHS guidelines.
             </p>
             <p class="mb-3">
               In early 2019, I then moved with my CTO to work at another online pharmacy
-              (IEC), working with Express, Nuxt, and Magento to build frontends
-              and backend services to support their sales and operations. Following changes to pharmacy regulations, I have since in 2020 moved towards a Data Science centric roll as a Full-stack developer, working on ethical data services for 21:32.io - working with clients such as McDonalds, Starbucks and other huge franchises.
+              <a href="https://www.instantecare.co.uk/">Instant eCare (IEC)</a>, working with Express, Nuxt, and Magento to build frontends
+              and backend services to support their sales and operations. Following changes to pharmacy regulations, in 2020 I have since moved towards a more Data Science centric roll as a Full-stack developer, working on ethical data services for <a href="https://2132.io/">21:32</a> - working with clients such as McDonalds, Starbucks and other huge franchises.
             </p>
           </div>
         </div>
